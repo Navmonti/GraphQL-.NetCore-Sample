@@ -11,7 +11,7 @@ namespace GraphQLSample.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IStudentService _studentService;
-        public StudentsController(StudentService studentService)
+        public StudentsController(IStudentService studentService)
             => _studentService = studentService;
 
         [HttpGet("students")]

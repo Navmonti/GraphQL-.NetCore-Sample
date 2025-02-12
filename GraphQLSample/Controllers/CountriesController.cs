@@ -12,7 +12,7 @@ namespace GraphQLSample.Controllers
     public class CountriesController : ControllerBase  
     {
         private readonly ICountryService _countryService;
-        public CountriesController(CountryService countryService)
+        public CountriesController(ICountryService countryService)
             => _countryService = countryService;
 
         [HttpGet("countries")]

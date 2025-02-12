@@ -27,12 +27,13 @@ namespace GraphQLSample.Model.Entities
         /// <summary>
         /// The ID of the country the city belongs to.
         /// </summary>
-        [ForeignKey("Country")]
+        
         public int CountryId { get; set; }
 
         /// <summary>
         /// The country of the city
         /// </summary>
+        [ForeignKey("CountryId")]
         public Country Country { get; set; }
 
         /// <summary>

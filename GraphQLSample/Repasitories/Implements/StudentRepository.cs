@@ -13,12 +13,12 @@ namespace GraphQLSample.Repasitories.Implements
 
         // Get all students
         public async Task<List<Student>> GetAllStudentsAsync()
-          => await _context.Students.ToListAsync();
+          => await _context.Students.Include(x => x.School).ToListAsync();
 
 
         // Get student by Id
         public async Task<Student> GetStudentByIdAsync(int id)
-          => await _context.Students.FirstOrDefaultAsync(s => s.StudentId == id);
+          => await _context.Students.Include(x => x.School).FirstOrDefaultAsync(s => s.StudentId == id);
 
 
         // Add a new student

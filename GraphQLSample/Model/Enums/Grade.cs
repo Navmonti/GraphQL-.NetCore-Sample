@@ -3,7 +3,7 @@
     // Enum for Grade
     public enum Grade
     {
-        Freshman,
+        Senior,
         Sophomore,
         Junior
     }

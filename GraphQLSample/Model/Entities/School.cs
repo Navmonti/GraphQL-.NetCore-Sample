@@ -27,12 +27,13 @@ namespace GraphQLSample.Model.Entities
         /// <summary>
         /// The ID of the city the school is located in.
         /// </summary>
-        [ForeignKey("City")]
+       
         public int CityId { get; set; }
 
         /// <summary>
         /// The city where the school is located
         /// </summary>
+        [ForeignKey("CityId")]
         public City City { get; set; }
 
         /// <summary>

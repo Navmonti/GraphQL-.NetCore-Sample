@@ -1,6 +1,7 @@
 ﻿using GraphQLSample.Model.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace GraphQLSample.Model.Entities
 {
@@ -45,13 +46,13 @@ namespace GraphQLSample.Model.Entities
         /// <summary>
         /// The ID of the school the student attends.
         /// </summary>
-        [ForeignKey("School")]
         public int SchoolId { get; set; }
 
         /// <summary>
-        /// The school of the student
+        /// The school of the student.
         /// </summary>
-        public School School { get; set; } = new School();
+        [ForeignKey("SchoolId")]
+        public virtual School School { get; set; } 
 
     }
 }

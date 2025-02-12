@@ -10,7 +10,7 @@ namespace GraphQLSample.Controllers
     public class CitiesController : Controller
     {
         private readonly ICityService _cityService;
-        public CitiesController(CityService cityService)
+        public CitiesController(ICityService cityService)
             => _cityService = cityService;
 
         [HttpGet("cities")]
